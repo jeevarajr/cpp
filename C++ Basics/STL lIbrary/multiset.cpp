@@ -1,4 +1,5 @@
 //Multi Set - Obeys only Sorted Rule not unique
+//unordered_set - unique, notsorted, can have any order - same as this
 //insert functionality of vector used
 //size,swap,rend,rbegin,empty
 //other functionalities available
