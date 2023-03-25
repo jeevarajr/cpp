@@ -1,6 +1,5 @@
-//Queue Container concepts 
-// FIFO
-//push,pop,front,back,emplace 
+//Priority Queue Container concepts 
+//largest value will stay at top
 //push,pop log n
 //top O(1)
 #include <iostream>
@@ -24,9 +23,22 @@ int main() {
     //    cout<<it<<" ";
    // }
 
-
+    cout<<endl;
     //to store minimum element in the top, min heap used
+    priority_queue<int,vector<int>,greater<int>>pqh; //pq heap 
+    //default format for storing minimum element at top
+    pqh.push(3); //{3}
+    pqh.emplace(6); //{3,6}
+    pqh.push(2);//{2,3,6} //stores minimum element 2 at top
+    pqh.emplace(4); //{2,3,4,6}
+    while(!pqh.empty())
+    {
+        cout<<pqh.top()<<" ";
+        pqh.pop();
+    }
     return 0;
 }
+
 OUTPUT:
 18 9 7 
+2 3 4 6 
