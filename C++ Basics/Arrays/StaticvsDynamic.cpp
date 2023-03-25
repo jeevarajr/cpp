@@ -12,3 +12,7 @@ delete [] p; //deleting dynamic memory
 cout<<p[1]; //wil print some garbage value 
 return 0;
 }
+
+Output:
+20
+32717
