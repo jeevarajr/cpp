@@ -1,0 +1,48 @@
+TO REDUCE TIME TAKEN BY CIN function
+
+ios::sync_with_stdio(0) and cin.tie(0) are C++ stream manipulators that can be used to improve the performance of input/output operations in C++ programs.
+
+ios::sync_with_stdio(0) is used to synchronize the C++ standard streams with the C standard streams. By default, the C++ standard streams (cin, cout, cerr, and clog) are synchronized with their C counterparts (stdin, stdout, stderr, and stderr). However, this synchronization can add a small overhead to input/output operations in C++ programs. By setting ios::sync_with_stdio(0), we disable this synchronization, which can lead to faster input/output operations.
+
+cin.tie(0) is used to untie cin from cout. By default, when cin is used to read input from the user, the output stream cout is automatically flushed before the input is read. This can also add a small overhead to input/output operations in C++ programs. By setting cin.tie(0), we untie cin from cout, which means that the output stream will not be flushed before input is read. This can lead to faster input/output operations.
+
+It is important to note that disabling synchronization and untying streams can have side effects, such as the loss of the ability to mix C-style input/output functions with C++ input/output functions. However, in most cases, these side effects are negligible and the performance gains are worth it.
+
+
+//Usually we want the remainder to always be between 0...m−1. 
+//However, in C++ and other languages, the remainder of a negative number is either zero or negative. 
+An easy way to make sure there are no negative remainders is to first
+calculate the remainder as usual and then add m if the result is negative:
+
+x = x%m;
+if (x < 0) x += m;
+
+However, this is only needed when there are subtractions in the code and the
+remainder may become negative
+
+A better way to compare floating point numbers is to assume that two
+numbers are equal if the difference between them is less than ε, where ε is a
+small number.
+In practice, the numbers can be compared as follows (ε = 10−9
+):
+if (abs(a-b) < 1e-9) {
+// a and b are equal
+}
+
+
+
+-->   \n is faster than endl
+-->
+-->
+-->
+-->
+-->
+-->
+-->
+-->
+-->
+-->
+-->
+-->
+-->
+-->
